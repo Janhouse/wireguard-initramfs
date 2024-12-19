@@ -148,6 +148,6 @@ ip link add dev "${INTERFACE}" type wireguard
 wg setconf "${INTERFACE}" /etc/wireguard/"${INTERFACE}".conf
 
 ip addr add "${INTERFACE_ADDR}" dev "${INTERFACE}"
-ip link set "${INTERFACE}" up
+ip link set "${INTERFACE}" mtu "${WG_MTU}" up
 ip route add "${ALLOWED_IPS}" dev "${INTERFACE}"
 log_end_msg

@@ -49,3 +49,5 @@ DATETIME_URL=google.com
 # Ensure the WireGuard interface persists after the initramfs exits by setting
 # PERSISTENT to any value (enabling the feature)
 PERSISTENT=
+
+WG_MTU=1280
